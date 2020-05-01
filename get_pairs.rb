@@ -1,4 +1,5 @@
 def get_pairs(arr, sum=5)
+  arr = arr.clone
   pairs = []
 
   arr.each_with_index do |first, i|
