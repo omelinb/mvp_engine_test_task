@@ -20,7 +20,7 @@ class Finder
       @missing << @arr.size + 2
     end
 
-    @missing.sort
+    @missing
   end
 
   def parse_array(arr, low, mid, high)
@@ -67,51 +67,7 @@ arr13 = [3] # 1, 2
 arr14 = [*1..21, *23..32] # 22, 33
 arr15 = [*1..21, *23..32, 34] # 22, 33
 
-
-finder = Finder.new(arr0)
-puts "For array '#{arr0}' missing elements are #{finder.find_missing}"
-
-finder = Finder.new(arr1)
-puts "For array '#{arr1}' missing elements are #{finder.find_missing}"
-
-finder = Finder.new(arr2)
-puts "For array '#{arr2}' missing elemens are #{finder.find_missing}"
-
-finder = Finder.new(arr3)
-puts "For array '#{arr3}' missing elements are #{finder.find_missing}"
-
-finder = Finder.new(arr4)
-puts "For array '#{arr4}' missing elements are #{finder.find_missing}"
-
-finder = Finder.new(arr5)
-puts "For array '#{arr5}' missing elements are #{finder.find_missing}"
-
-finder = Finder.new(arr6)
-puts "For array '#{arr6}' missing elements are #{finder.find_missing}"
-
-finder = Finder.new(arr7)
-puts "For array '#{arr7}' missing elements are #{finder.find_missing}"
-
-finder = Finder.new(arr8)
-puts "For array '#{arr8}' missing elements are #{finder.find_missing}"
-
-finder = Finder.new(arr9)
-puts "For array '#{arr9}' missing elements are #{finder.find_missing}"
-
-finder = Finder.new(arr10)
-puts "For array '#{arr10}' missing elements are #{finder.find_missing}"
-
-finder = Finder.new(arr11)
-puts "For array '#{arr11}' missing elements are #{finder.find_missing}"
-
-finder = Finder.new(arr12)
-puts "For array '#{arr12}' missing elements are #{finder.find_missing}"
-
-finder = Finder.new(arr13)
-puts "For array '#{arr13}' missing elements are #{finder.find_missing}"
-
-finder = Finder.new(arr14)
-puts "For array '#{arr14}' missing elements are #{finder.find_missing}"
-
-finder = Finder.new(arr15)
-puts "For array '#{arr15}' missing elements are #{finder.find_missing}"
+[arr0, arr1, arr2, arr3, arr4, arr5, arr6, arr7, arr8, arr9, arr10, arr11, arr12, arr13, arr14, arr15].each do |arr|
+  finder = Finder.new(arr)
+  puts "For array '#{arr}' missing elements are #{finder.find_missing}"
+end
